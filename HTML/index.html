@@ -5,46 +5,42 @@
     <title>Calculator</title>
 
     <!-- Bootstrap stylesheet -->
-    <link href="./node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
 
     <!-- Main stylesheet -->
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="../CSS/main.css">
 </head>
 
 <body>
 <div class="calculator d-flex flex-column justify-content-center align-content-center">
 
-    <div class="display d-flex justify-content-center align-content-end">
-        <input class="calculating value" type="text" name="txt">
+    <div class="calculator__display d-flex justify-content-center align-content-end">
+        <input class="calculating" type="text" name="txt">
     </div>
 
-    <div class="symbols_numbers row m-0 p-0">
-        <button type="button" class="primary_symbols answer col-3">AC</button>
-        <button type="button" class="primary_symbols col-3">
+    <div class="calculator__keys row m-0 p-0">
+        <button type="button" class="all_clear col-3">AC</button>
+        <button type="button" class="key--operator delete col-3">
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-backspace" viewBox="0 0 16 16">
             <path d="M5.83 5.146a.5.5 0 0 0 0 .708L7.975 8l-2.147 2.146a.5.5 0 0 0 .707.708l2.147-2.147 2.146 2.147a.5.5 0 0 0 .707-.708L9.39 8l2.146-2.146a.5.5 0 0 0-.707-.708L8.683 7.293 6.536 5.146a.5.5 0 0 0-.707 0z"/>
             <path d="M13.683 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7.08a2 2 0 0 1-1.519-.698L.241 8.65a1 1 0 0 1 0-1.302L5.084 1.7A2 2 0 0 1 6.603 1h7.08zm-7.08 1a1 1 0 0 0-.76.35L1 8l4.844 5.65a1 1 0 0 0 .759.35h7.08a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1h-7.08z"/>
         </svg>
         </button>
-        <button type="button" class="primary_symbols col-3">%</button>
-        <button type="button" class="primary_symbols division col-3">
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="14" viewBox="0 0 18 14" fill="none">
-            <path d="M11 2C11 2.53043 10.7893 3.03914 10.4142 3.41421C10.0391 3.78929 9.53043 4 9 4C8.46957 4 7.96086 3.78929 7.58579 3.41421C7.21071 3.03914 7 2.53043 7 2C7 1.46957 7.21071 0.960859 7.58579 0.585786C7.96086 0.210714 8.46957 0 9 0C9.53043 0 10.0391 0.210714 10.4142 0.585786C10.7893 0.960859 11 1.46957 11 2ZM0 7C0 6.73478 0.105357 6.48043 0.292893 6.29289C0.48043 6.10536 0.734784 6 1 6H17C17.2652 6 17.5196 6.10536 17.7071 6.29289C17.8946 6.48043 18 6.73478 18 7C18 7.26522 17.8946 7.51957 17.7071 7.70711C17.5196 7.89464 17.2652 8 17 8H1C0.734784 8 0.48043 7.89464 0.292893 7.70711C0.105357 7.51957 0 7.26522 0 7ZM9 14C9.53043 14 10.0391 13.7893 10.4142 13.4142C10.7893 13.0391 11 12.5304 11 12C11 11.4696 10.7893 10.9609 10.4142 10.5858C10.0391 10.2107 9.53043 10 9 10C8.46957 10 7.96086 10.2107 7.58579 10.5858C7.21071 10.9609 7 11.4696 7 12C7 12.5304 7.21071 13.0391 7.58579 13.4142C7.96086 13.7893 8.46957 14 9 14Z" fill="#E7D3FF"/>
-        </svg>
-        </button>
+        <button type="button" class="key--operator col-3">%</button>
+        <button type="button" class="key--operator division col-3">÷</button>
         <button type="button" class="number col-3">7</button>
         <button type="button" class="number col-3">8</button>
         <button type="button" class="number col-3">9</button>
-        <button type="button" class="primary_symbols col-3">x</button>
+        <button type="button" class="key--operator col-3">x</button>
         <button type="button" class="number col-3">4</button>
         <button type="button" class="number col-3">5</button>
         <button type="button" class="number col-3">6</button>
-        <button type="button" class="primary_symbols col-3">-</button>
+        <button type="button" class="key--operator col-3">-</button>
         <button type="button" class="number col-3">1</button>
         <button type="button" class="number col-3">2</button>
         <button type="button" class="number col-3">3</button>
-        <button type="button" class="secondary_symbols col-3">+</button>
-        <button type="button" class="number col-3">
+        <button type="button" class="key--plus col-3">+</button>
+        <button type="button" class="sci_calc col-3">
             <svg xmlns="http://www.w3.org/2000/svg" width="42" height="27" viewBox="0 0 42 27" fill="none">
             <rect x="16.4337" y="5.45206" width="14.8403" height="11.716" rx="4" fill="#E7D3FF"/>
             <rect x="9.51367" y="12.5477" width="13.8403" height="10.716" rx="3.5" fill="#E7D3FF" stroke="#474E68"/>
@@ -53,16 +49,16 @@
         </svg>
         </button>
         <button type="button" class="number col-3">0</button>
-        <button type="button" class="number col-3">,</button>
-        <button type="button" class="secondary_symbols col-3">=</button>
+        <button type="button" class="number col-3">.</button>
+        <button type="button" class="equal col-3">=</button>
     </div>
 
 </div>
 
 <!-- Bootstrap JS -->
-<script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
 <!-- Main stylesheet -->
-<script src="./main.js"></script>
+<script src="../JS/main.js"></script>
 </body>
 </html>

@@ -12,7 +12,7 @@
     --bs-body-font-family: Poppins;
 }
 
-/* Main Dispaly */
+/* Main Style */
 
 .calculator {
     max-width: 375px;
@@ -21,26 +21,28 @@
     background-color: var(--display-color);
 }
 
-.display {
+.calculator__display {
     width: 100%;
     height: 342px;
     box-sizing: border-box;
     background-color: var(--display-color);
 }
 
-.display .calculating {
+.calculator__display .calculating {
     width: 100%;
     height: 100%;
-    direction: rtl;
     border: none;
+    direction: rtl;
+    font-size: 44px;
+    font-weight: 500;
     color: var(--numbers-color);
     background-color: var(--display-color);
 }
 
 /* Buttons Style */
 
-.symbols_numbers .primary_symbols,
-.secondary_symbols, .number {
+.calculator__keys .key--operator,
+.key--plus, .sci_calc, .number, .equal, .all_clear {
     aspect-ratio: 1;
     font-size: 20px;
     font-weight: 600;
@@ -48,34 +50,34 @@
     outline: none;
 }
 
-.symbols_numbers  button:hover {
+.calculator__keys  button:hover {
     background-color: var(--secondary-color-highlight);
 }
 
 
 /* Symbols */
 
-.symbols_numbers .primary_symbols {
+.calculator__keys .key--operator, .all_clear {
     color: var(--symbols-color);
     background-color: var(--primary-color);
 }
 
-.symbols_numbers .secondary_symbols {
+.calculator__keys .key--plus, .equal {
     color: var(--numbers-color);
     background-color: var(--primary-color-highlight);
 }
 
-.symbols_numbers .answer {
+.calculator__keys .all_clear {
     border-radius: 25px 0px 0px 0px;
 }
 
-.symbols_numbers .division {
+.calculator__keys .division {
     border-radius: 0px 25px 0px 0px;
 }
 
 /* Numbers */
 
-.symbols_numbers .number {
+.calculator__keys .number, .sci_calc  {
     color: var(--numbers-color);
     background-color: var(--secondary-color);
 }
