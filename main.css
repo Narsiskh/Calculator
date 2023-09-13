@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins&display=swap');
+
+:root {
+    --bs-body-bg: #FAFAFA;
+    --display-color: #404258;
+    --primary-color: #50577A;
+    --secondary-color: #474E68;
+    --primary-color-highlight: #BB86FC;
+    --secondary-color-highlight: #6B728E;
+    --symbols-color: #E7D3FF;
+    --numbers-color: #FFFFFF;
+    --bs-body-font-family: Poppins;
+}
+
+/* Main Dispaly */
+
+.calculator {
+    max-width: 375px;
+    height: 812px;
+    margin: 70px auto;
+    background-color: var(--display-color);
+}
+
+.display {
+    width: 100%;
+    height: 342px;
+    box-sizing: border-box;
+    background-color: var(--display-color);
+}
+
+.display .calculating {
+    width: 100%;
+    height: 100%;
+    direction: rtl;
+    border: none;
+    color: var(--numbers-color);
+    background-color: var(--display-color);
+}
+
+/* Buttons Style */
+
+.symbols_numbers .primary_symbols,
+.secondary_symbols, .number {
+    aspect-ratio: 1;
+    font-size: 20px;
+    font-weight: 600;
+    border: 0.5px solid var(--display-color);
+    outline: none;
+}
+
+.symbols_numbers  button:hover {
+    background-color: var(--secondary-color-highlight);
+}
+
+
+/* Symbols */
+
+.symbols_numbers .primary_symbols {
+    color: var(--symbols-color);
+    background-color: var(--primary-color);
+}
+
+.symbols_numbers .secondary_symbols {
+    color: var(--numbers-color);
+    background-color: var(--primary-color-highlight);
+}
+
+.symbols_numbers .answer {
+    border-radius: 25px 0px 0px 0px;
+}
+
+.symbols_numbers .division {
+    border-radius: 0px 25px 0px 0px;
+}
+
+/* Numbers */
+
+.symbols_numbers .number {
+    color: var(--numbers-color);
+    background-color: var(--secondary-color);
+}
+
+
