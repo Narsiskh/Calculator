@@ -32,7 +32,7 @@
     width: 100%;
     height: 100%;
     border: none;
-    direction: rtl;
+    direction: ltr;
     font-size: 44px;
     font-weight: 500;
     color: var(--numbers-color);
