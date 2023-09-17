@@ -17,13 +17,16 @@
 .calculator {
     max-width: 375px;
     height: 812px;
-    margin: 70px auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: var(--display-color);
 }
 
 .calculator__display {
     width: 100%;
-    height: 342px;
+    min-height: 342px;
     box-sizing: border-box;
     background-color: var(--display-color);
 }
@@ -32,7 +35,7 @@
     width: 100%;
     height: 100%;
     border: none;
-    direction: ltr;
+    direction: rtl;
     font-size: 44px;
     font-weight: 500;
     color: var(--numbers-color);
@@ -41,13 +44,18 @@
 
 /* Buttons Style */
 
+.calculator__keys {
+    height: 100%;
+}
+
 .calculator__keys .key--operator,
 .key--plus, .sci_calc, .number, .equal, .all_clear {
     aspect-ratio: 1;
     font-size: 20px;
     font-weight: 600;
-    border: 0.5px solid var(--display-color);
     outline: none;
+    border: 0.5px solid var(--display-color);
+
 }
 
 .calculator__keys  button:hover {
@@ -81,5 +89,17 @@
     color: var(--numbers-color);
     background-color: var(--secondary-color);
 }
+
+@media screen and (max-width: 240px) {
+    .calculator {
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        transform: translate(-50%, -50%);
+
+    }
+}
+
+
 
 
